@@ -1,0 +1,60 @@
+<h2>Material Theming Example</h2>
+<div class="app-content responsive-grid">   
+    <div>
+        <h3>Buttons</h3>
+        <div class="flex-row">
+            <button mat-flat-button (click)="showDialog()" aria-label="Open dialog button">Open</button>
+            <button mat-flat-button class="accent" aria-label="Accent button">Accent</button>
+            <button mat-flat-button class="warn" aria-label="Warn button">Warn</button>
+        </div>
+        <br /><br />
+
+        <h3>Input Field</h3>
+        <mat-form-field appearance="outline">
+            <input matInput placeholder="Enter some information" aria-label="Input field for information"/>
+        </mat-form-field>
+        <br /><br />
+
+        <h3>Checkbox</h3>
+        <mat-checkbox aria-label="Check this box">Check this box!</mat-checkbox>
+        <br /><br />
+
+        <h3>Expansion panel</h3>
+
+        <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+                <mat-panel-title> Expansion title </mat-panel-title>
+                <mat-panel-description>
+                    This is a summary of the content
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>This is the primary content of the panel.</p>
+        </mat-expansion-panel>
+        <br /><br />
+    </div>
+    <div>
+        <h3>A card</h3>
+        <mat-card class="example-card" appearance="outlined">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image" aria-hidden="true"></div>
+                <mat-card-title>Shiba Inu</mat-card-title>
+                <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+                alt="Photo of a Shiba Inu" />
+            <mat-card-content>
+                <p>
+                    The Shiba Inu is the smallest of the six original and distinct
+                    spitz breeds of dog from Japan. A small, agile dog that copes very
+                    well with mountainous terrain, the Shiba Inu was originally bred
+                    for hunting.
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button aria-label="Like button">LIKE</button>
+                <button mat-button aria-label="Share button">SHARE</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
+
