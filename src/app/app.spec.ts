@@ -2,11 +2,15 @@ import { TestBed } from '@angular/core/testing';
 import { App } from './app';
 import { Theme } from './common/nav/theme';
 import { RouterTestingModule } from '@angular/router/testing';
+import { RouterModule } from '@angular/router';
+import { Home } from './components/home/home';
 
 describe('App', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [App, RouterTestingModule],
+      imports: [App,  RouterModule.forRoot(
+        [{path: 'home', component: Home}]
+      )],
       providers: [Theme],
     }).compileComponents();
   });

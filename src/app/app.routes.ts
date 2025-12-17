@@ -8,6 +8,11 @@ export const routes: Routes = [
         loadComponent: () => import('./components/home/home')
             .then((m) => m.Home), title: 'Home'
     },
+        {
+        path: 'widget',
+        loadComponent: () => import('./components/dynamic-component/widget/widget')
+            .then((m) => m.Widget), title: 'Widget'
+    },
     // {
     //     path: 'dynamic-app',
     //     loadComponent: () => import('./components/dynamic-component/dynamic-app')

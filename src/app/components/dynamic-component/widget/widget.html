@@ -1,0 +1,26 @@
+<div class="widget">
+     <!-- Widget Header -->
+    <div class="widget-header">
+        <div class="flex-row">
+          <img class="widget-icon" src="assets/weather.png" alt="Weather Icon" aria-hidden="true"/>
+          <button data-testid="close-btn" mat-flat-button class="accent" (click)="closed.emit()" aria-label="Close widget">Close</button>
+        </div>    
+        <div data-testid="title" class="widget-title" aria-label="Widget Title">{{title()}}</div>
+        <div data-testid="description" class="widget-subtitle" aria-label="Widget Description">{{description()}}</div>
+    </div>
+    <!-- Widget Body -->
+    <div class="widget-body">
+        <!-- Widget Action -->
+        <div class="widget-action">
+            <button data-testid="collapse-btn" mat-flat-button class="accent" (click)="collapsed.set(!collapsed())" aria-label="Toggle collapse">{{btnText()}}</button>
+        </div>
+        <!-- Widget Content -->       
+        <div class="widget-content">
+          @if (!collapsed()) { 
+            <ng-content></ng-content> 
+          } @else {
+            <p class="no-content" aria-label="No content available">No content...</p>
+          }
+        </div>            
+    </div>
+</div>
