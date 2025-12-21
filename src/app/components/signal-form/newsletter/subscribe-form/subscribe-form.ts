@@ -2,10 +2,14 @@ import { Component, computed, effect, signal } from '@angular/core';
 import { initialData, Subscription, subscriptionSchema } from '../subscription';
 import { Field, form, submit } from '@angular/forms/signals';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 
 @Component({
   selector: 'subscribe-form',
-  imports: [Field, MatButtonModule],
+  imports: [Field, MatButtonModule, MatCardModule, MatFormFieldModule, MatInputModule, MatIconModule],
   templateUrl: './subscribe-form.html',
   styleUrl: './subscribe-form.scss',
 })

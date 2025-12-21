@@ -1,11 +1,19 @@
 /* Form Layout */
+@use '@angular/material' as mat;
+
+:root {
+  @include mat.card-overrides((
+    elevated-container-color: orange,
+    elevated-container-elevation: red,
+  ));
+}
 form {
   max-width: 100%;
 }
 
 .row {
 	display: grid;
-	grid-template-columns: .2fr 1fr;
+	grid-template-columns: .5fr 1fr;
 	align-items: top;
   gap: var(--spacing-sm);
   margin-bottom: var(--spacing-md, 1rem);
