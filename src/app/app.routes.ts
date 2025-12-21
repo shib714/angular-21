@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-     { path: '', pathMatch: 'full', redirectTo: 'home', title: 'Home' },
-    
+    { path: '', pathMatch: 'full', redirectTo: 'home', title: 'Home' },
+
     {
         path: 'home',
         loadComponent: () => import('./components/home/home')
@@ -12,5 +12,10 @@ export const routes: Routes = [
         path: 'dynamic-app',
         loadComponent: () => import('./components/dynamic-component/dynamic-app')
             .then((m) => m.DynamicApp), title: 'Dynamic Component'
+    },
+    {
+        path: 'subscribe-form',
+        loadComponent: () => import('./components/signal-form/newsletter/subscribe-form/subscribe-form')
+            .then((m) => m.SubscribeForm), title: 'Subscribe Signal Form'
     },
 ];
